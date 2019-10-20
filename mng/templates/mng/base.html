@@ -1,0 +1,43 @@
+{% load i18n static %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:'en-us'}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'mng/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mng/css/base.css' %}"
+    {% block extra_css %}{% endblock extra_css %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="container">
+        <div class="jumbotron jumbotron-extends">
+            <h1 class="display-3">
+                {% block display %}{% endblock %}
+            </h1>
+            <p class="lead">
+                {% block lead %}{% endblock %}
+            </p>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+
+    <div class="container">
+        <a href="{%url 'mng:mypage' %}">
+            <p class="text-right">Topへ戻る</p>
+        </a>
+    </div>
+
+</div>
+
+<script src="{% static 'mng/js/jquery-3.4.1.slim.min.js' %}"></script>
+<script src="{% static 'mng/js/bootstrap.bundle.min.js' %}"></script>
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

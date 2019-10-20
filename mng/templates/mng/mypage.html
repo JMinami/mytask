@@ -1,0 +1,57 @@
+{% extends 'mng/base.html' %}
+
+{% load static %}
+
+{% load lookup %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'mng/css/mypage.css' %}">
+{% endblock extra_css %}
+{% block title %}マイページ{% endblock title %}
+
+{% block display %}
+タスク管理
+{% endblock display %}
+
+{% block lead %}
+タスクを管理します
+{% endblock lead %}
+
+{% block content %}
+
+
+<div class="container">
+    <form action="{% url 'mng:add'%}" method="get">
+        <button type="submit" class="btn btn-secondary">タスクを追加する</button>
+    </form>
+</div>
+<br>
+dic.id
+<div class="container">
+    <div class="container-fluid">
+        <!-- タスク一覧を表示 -->
+        <div class="row">
+            {% if tasks %}
+            {% for task in tasks %}
+            <div class="col-3">
+                <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
+                    <div class="card">
+                        <img src="{% static 'mng/img/hexagon.jpg' %}" class="card-img">
+                        {% with id=task.id %}
+                        <div class="card-img-overlay center-block">
+                            <p class="card-text">{{ dic|lookup:id }}%</p>
+                        </div>
+                        {% endwith %}
+                    </div>
+                    <p class="text-center">{{ task.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <a href="#"><p class="text-right">もっとみる</p></a>
+</div>
+<p>{{name}}</p>
+
+{% endblock content %}

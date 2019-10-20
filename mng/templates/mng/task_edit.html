@@ -1,0 +1,77 @@
+{% extends 'mng/base.html' %}
+
+{% load static %}
+{% block title %}タスク編集{% endblock title %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'mng/css/task_edit.css' %}">
+{% endblock extra_css%}
+
+{% block display %}
+タスク編集
+{% endblock display %}
+
+{% block lead %}
+タスクを編集したり確認したりします
+{% endblock lead %}
+
+
+{% block content %}
+<!-- 以下コンテンツ -->
+<div class="container">
+    <table class="table">
+        {% if task %}
+        <tbody>
+        <tr>
+            <th scope="row">タスク名</th>
+            <td><p class="form-control">{{task.name}}</p></td>
+        </tr>
+        <tr>
+            <th scope="row">レベル</th>
+            <td><p class="form-control">{{task.level}}</p></td>
+        </tr>
+        <tr>
+            <th scope="row">概要</th>
+            <td><P class="form-control">{{task.overview}}</P></td>
+        </tr>
+        <tr>
+            <th scope="row">状態</th>
+            <td><p class="form-control">{{task.get_condition_display}}</p></td>
+        </tr>
+        <tr>
+            <th scope="row">進捗度</th>
+            <td><p class="form-control">{{progress}}</p></td>
+        </tr>
+
+        <tr>
+            <th scope="row">追加日</th>
+            <td><p class="form-control">{{task.add_date|date:'Y年m月d日'}}</p></td>
+        </tr>
+        <tr>
+            <th scope="row">終了日</th>
+            <td><p class="form-control">{{task.end_date|date:'Y年m月d日'}}</p></td>
+        </tr>
+        {% for p in progresses %}
+        <tr>
+            <th scope="row">進捗詳細{{forloop.counter}}</th>
+            <td><a href="#">
+                <p>{{p.date|date:'Y年m月d日'}}</p>
+            </a> </td>
+        </tr>
+
+        {% endfor %}
+        </tbody>
+        {% endif %}
+    </table>
+</div>
+
+
+
+
+{% block extra_js %}
+{% endblock extra_js %}
+
+{% endblock content %}
+
+
+
+

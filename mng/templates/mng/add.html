@@ -1,0 +1,81 @@
+{% extends 'mng/base.html' %}
+
+{% load static %}
+
+{% block title %}タスク追加{% endblock title %}
+
+{% block display %}
+タスク追加
+{% endblock display %}
+
+{% block lead %}
+タスクを追加します
+{% endblock lead %}
+
+
+{% block content %}
+
+<div class="container">
+    <form action="{% url 'mng:mypage' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">タスク名</label>
+            <input class="form-control" type="text" name="name" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="level">レベル</label>
+            <div class="input-group">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        レベルの選択
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <button type="button" class="dropdown-item" value="1">1</button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item" value="2">2</button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item" value="4">4</button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item" value="8">8</button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item" value="16">16</button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item" value="99">99</button>
+                        </li>
+                    </ul>
+                </div>
+                <input type="text" readonly="readonly" name="level" id="level" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="orerview">タスク概要</label>
+            <textarea name="overview" id="overview" class="form-control" row="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit-button">追加</button>
+        </div>
+    </form>
+</div>
+
+
+{% block extra_js %}
+<script src="{% static 'mng/js/add.js' %}"></script>
+{% endblock extra_js %}
+
+{% endblock content %}
+
+
+
+

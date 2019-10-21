@@ -1,0 +1,86 @@
+{% extends 'mng/base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/hot-sneaks/jquery-ui.css">
+{% endblock extra_css %}
+
+{% block title %}進捗情報を追加する{% endblock title %}
+
+{% block display %}
+進捗の追加
+{% endblock display %}
+
+{% block lead %}
+進捗情報を追加します
+{% endblock lead %}
+
+{% block content %}
+<div class="container">
+    <form action="{% url 'mng:task_edit' task.id %}" method="post">
+        {% csrf_token %}
+        <table class="table">
+            {% if task %}
+            <tbody>
+            <tr>
+                <th scope="row">タスク名</th>
+                <td><p>{{task.name}}</p></td>
+            </tr>
+            <tr>
+                <th scope="row">レベル</th>
+                <td><p id="level">{{task.level}}</p></td>
+            </tr>
+            <tr>
+                <th scope="row">現在までの進捗</th>
+                <td><p id="current_level">{{current_level}}</p></td>
+            </tr>
+            <tr>
+                <th scope="row">本日の進捗</th>
+                <td>
+                    <input type="text" class="form-control" name="progress"
+                           id="progress">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">日にち</th>
+                <td>
+                    <input type="text"
+                           class="form-control" id="datetimepicker"
+                           name="date"
+                           data-toggle="datetimepicker"
+                           data-target="#datetimepicker"/>
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">内容</th>
+                <td>
+                    <textarea id="content" name="content" class="form-control"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    <div class="text-right">
+                        <button type="submit" class="float-right"
+                                id="submit-button">
+                            追加
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+
+            {% endif %}
+        </table>
+
+    </form>
+</div>
+
+{% block extra_js %}
+<script src="{% static 'mng/js/add_progress.js' %}"></script>
+{% endblock extra_js %}
+
+
+{% endblock content %}

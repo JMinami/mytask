@@ -10,7 +10,7 @@ class taskForm(ModelForm):
         fields = '__all__'
 
 
-class progress(ModelForm):
+class progressForm(ModelForm):
    class Meta:
       model = progress
       fields = '__all__'

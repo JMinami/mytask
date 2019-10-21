@@ -25,7 +25,7 @@ class progress(models.Model):
     task = models.ForeignKey(task, on_delete=models.CASCADE, null=True)
     date = models.DateField()
     level = models.IntegerField(default=0)
-    content = models.CharField(max_length=200)
+    content = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return self.task.name + " / " +self.date.strftime('%Y年%m月%d日')

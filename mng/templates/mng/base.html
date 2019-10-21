@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static 'mng/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'mng/css/base.css' %}"
+    <link rel="stylesheet" href="{% static 'mng/css/base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/vader/jquery-ui.min.css">
     {% block extra_css %}{% endblock extra_css %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
@@ -35,9 +36,11 @@
 
 </div>
 
-<script src="{% static 'mng/js/jquery-3.4.1.slim.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="{% static 'mng/js/bootstrap.bundle.min.js' %}"></script>
-{% block extra_js %}{% endblock %}
+
+{% block extra_js %}{% endblock extra_js %}
 
 </body>
 </html>

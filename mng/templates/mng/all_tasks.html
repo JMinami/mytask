@@ -1,0 +1,54 @@
+{% extends 'mng/base.html' %}
+
+{% load static %}
+
+{% block title %}全てのタスクをみる{% endblock title %}
+
+{% block display %}全タスクをみる
+{% endblock display %}
+
+{% block lead %}全てのタスクをみる
+{% endblock lead %}
+
+{% block content %}
+{% if all_tasks %}
+<div class="container">
+    <form action="#" method="post">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">タスク名</th>
+                <th scope="col">レベル</th>
+                <th scope="col">状態</th>
+                <th scope="col">追加日</th>
+                <th scope="col">終了日</th>
+                <th scope="col">概要</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for task in all_tasks %}
+            <tr>
+                <th scope="row"><a href="{% url 'mng:task_edit' task.id %}">
+                    {{task.name}}</a></th>
+                <td>{{task.level}}</td>
+                <td>{{task.get_condition_display}}</td>
+                <td>{{task.add_date|date:'Y年m月d日'}}</td>
+                <td>{{task.end_date|date:'Y年m月d日'}}</td>
+                <td>{{task.overview}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </form>
+
+</div>
+
+
+{% endif %}
+
+
+{% block extra_js %}{% endblock extra_js %}
+
+
+{% endblock content %}

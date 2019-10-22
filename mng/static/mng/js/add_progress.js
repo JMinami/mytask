@@ -1,5 +1,5 @@
 $(function(){
-    $('#datetimepicker').datepicker();
+    $('#datetimepicker').datepicker({dateFormat:'yy-mm-dd'});
 
     //追加ボタンクリック
     $('#submit-button').click(function(){

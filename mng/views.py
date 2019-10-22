@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from mng.models import task,progress
 from .form import taskForm, progressForm
 from django.utils import timezone
-
+from mng.functions import get_progress_degree
+from django.db.models import Q
 
 # Create your views here.
 display_task_number = 4
@@ -21,21 +22,25 @@ def mypage(request):
                      condition=condition, add_date=add_date)
             t.save()
 
-    # タスク一覧を取得
-    tasks = task.objects.all().order_by("-id")[0:display_task_number]
+    # 最近のタスク一覧を取得
+    latest_tasks = task.objects.all().order_by("-id")[0:display_task_number]
+    latest_dic = get_progress_degree(latest_tasks)
 
-    dic = {}
-    # タスクの進捗度を取得
-    for t in tasks:
-        progresses = progress.objects.filter(task=t)
-        temp_progress = 0
-        for p in progresses:
-            temp_progress = temp_progress + p.level
+    # 未完了のタスク一覧を取得
+    nocomplate_tasks = task.objects.filter(Q(condition=1) | Q(condition=2)).order_by("-id")[0:display_task_number]
+    nocomplate_dic = get_progress_degree(nocomplate_tasks)
 
-        #進捗度を辞書に格納
-        progress_d = temp_progress / t.level
-        dic[t.id] = progress_d * 100
-    return render(request, 'mng/mypage.html', {"tasks": tasks, "dic": dic})
+    # 完了したタスク一覧を取得
+    complate_tasks = task.objects.filter(condition=3).order_by("-id")[0:display_task_number]
+    complate_dic = get_progress_degree(complate_tasks)
+
+
+
+    return render(request, 'mng/mypage.html',
+                  {"latest_tasks": latest_tasks, "latest_dic": latest_dic,
+                   "nocomplate_tasks": nocomplate_tasks, "nocomplate_dic": nocomplate_dic,
+                   "complate_tasks": complate_tasks, "complate_dic": complate_dic}
+                  )
 
 
 def add(request):
@@ -46,31 +51,35 @@ def add(request):
 def task_edit(request, task_id):
 
     if request.method == 'POST':
+
         form = progressForm(request.POST)
         if form.is_valid():
-            t = task.ovjects.filter(id=task_id)
+            t = task.objects.get(id=task_id)
             date = request.POST['date']
-            level = request.POST['progress']
+            pr = request.POST['progress']
             content = request.POST['content']
 
-            p = progress(task=t, date=date, level=level, content=content)
+            p = progress(task=t, date=date, progress=pr, content=content)
             p.save()
 
-    t = get_object_or_404(task,id=task_id)
+    t = get_object_or_404(task, id=task_id)
     ps = progress.objects.filter(task=t)
     t_p = 0
     for p in ps:
-        t_p = t_p + p.level
+        t_p = t_p + p.progress
 
     t_p_d = t_p / t.level * 100
 
     #状態を更新
-    if t_p_d > 0.0:
-        #着手状態
-        t.condition = 2
-    elif t_p_d == 100.0:
+    if t_p_d == 100.0:
         #完了状態
         t.condition = 3
+        #終了日を更新
+        p = progress.objects.filter(task=t).latest('date')
+        t.end_date = p.date
+    elif t_p_d > 0.0:
+        #着手状態
+        t.condition = 2
     else:
         #未着手
         t.condition = 1
@@ -86,10 +95,15 @@ def add_progress(request, task_id):
     ps = progress.objects.filter(task=t)
     current_level = 0
     for p in ps:
-        current_level = p.level
+        current_level = current_level + p.progress
 
     return render(request, 'mng/add_progress.html',
                   {"task": t, "current_level":current_level})
 
+
+def all_tasks(request):
+
+    ts = task.objects.all()
+    return render(request, 'mng/all_tasks.html', {"all_tasks": ts})
 
 

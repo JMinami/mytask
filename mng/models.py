@@ -22,9 +22,9 @@ class task(models.Model):
 
 
 class progress(models.Model):
-    task = models.ForeignKey(task, on_delete=models.CASCADE, null=True)
+    task = models.ForeignKey(task, on_delete=models.CASCADE,blank=True, null=True)
     date = models.DateField()
-    level = models.IntegerField(default=0)
+    progress = models.IntegerField(default=0)
     content = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):

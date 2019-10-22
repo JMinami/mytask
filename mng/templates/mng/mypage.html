@@ -6,6 +6,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'mng/css/mypage.css' %}">
+<link rel="stylesheet" href="{% static 'mng/css/jquery.circliful.css' %}">
 {% endblock extra_css %}
 
 {% block title %}マイページ{% endblock title %}
@@ -27,78 +28,86 @@
     </form>
 </div>
 <br>
-<div class="container">
-    <h3 class="text-danger">最近のタスク</h3>
-    <div class="container-fluid">
-        <!-- タスク一覧を表示 -->
-        <div class="row">
-            {% if latest_tasks %}
-            {% for task in latest_tasks %}
-            <div class="col-3">
-                <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
-                    <div class="card">
-                        <img src="{% static 'mng/img/hexagon.jpg' %}" class="card-img">
-                        {% with id=task.id %}
-                        <div class="card-img-overlay center-block">
-                            <p class="card-text">{{ latest_dic|lookup:id }}%</p>
-                        </div>
-                        {% endwith %}
+<div class="container-fluid">
+    <h3 class="text-success">最近のタスク</h3>
+    <!-- タスク一覧を表示 -->
+    <div class="row">
+        {% if latest_tasks %}
+        {% for task in latest_tasks %}
+        <div class="col-3">
+            <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
+                <div class="card">
+                    {% with id=task.id %}
+                    <div class="circle border-bottom" data-percent="{{ latest_dic|lookup:id }}">
                     </div>
-                    <p class="text-center">{{ task.name }}</p>
-                </a>
-            </div>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
-    <h3 class="text-danger">未完了のタスク</h3>
-    <div class="container-fluid">
-        <!-- タスク一覧を表示 -->
-        <div class="row">
-            {% if nocomplate_tasks %}
-            {% for task in nocomplate_tasks %}
-            <div class="col-3">
-                <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
-                    <div class="card">
-                        <img src="{% static 'mng/img/hexagon.jpg' %}" class="card-img">
-                        {% with id=task.id %}
-                        <div class="card-img-overlay center-block">
-                            <p class="card-text">{{ nocomplate_dic|lookup:id }}%</p>
-                        </div>
-                        {% endwith %}
+                    {% endwith %}
+                    <div class="card-body">
+                        <p class="card-text text-center">{{ task.name }}</p>
                     </div>
-                    <p class="text-center">{{ task.name }}</p>
-                </a>
-            </div>
-            {% endfor %}
-            {% endif %}
+                </div>
+            </a>
         </div>
+        {% endfor %}
+        {% endif %}
     </div>
-    <h3 class="text-danger">完了したタスク</h3>
-    <div class="container-fluid">
-        <!-- タスク一覧を表示 -->
-        <div class="row">
-            {% if complate_tasks %}
-            {% for task in complate_tasks %}
-            <div class="col-3">
-                <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
-                    <div class="card">
-                        <img src="{% static 'mng/img/hexagon.jpg' %}" class="card-img">
-                        {% with id=task.id %}
-                        <div class="card-img-overlay center-block">
-                            <p class="card-text">{{ complate_dic|lookup:id }}%</p>
-                        </div>
-                        {% endwith %}
-                    </div>
-                    <p class="text-center">{{ task.name }}</p>
-                </a>
-            </div>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
-    <a href="{% url 'mng:all_tasks' %}"><p class="text-right">全てのタスクをみる</p></a>
 </div>
-<p>{{name}}</p>
+
+<div class="container-fluid">
+    <h3 class="text-success">未完了のタスク</h3>
+    <!-- タスク一覧を表示 -->
+    <div class="row">
+        {% if nocomplate_tasks %}
+        {% for task in nocomplate_tasks %}
+        <div class="col-3">
+            <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
+                <div class="card">
+                    {% with id=task.id %}
+                    <div class="circle border-bottom"
+                         data-percent="{{ nocomplate_dic|lookup:id }}">
+                    </div>
+                    {% endwith %}
+                    <div class="card-body">
+                        <p class="card-text text-center">{{ task.name }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h3 class="text-success">完了したタスク</h3>
+    <!-- タスク一覧を表示 -->
+    <div class="row">
+        {% if complate_tasks %}
+        {% for task in complate_tasks %}
+        <div class="col-3">
+            <a href="{% url 'mng:task_edit' task.id %}" class="text-dark">
+                <div class="card">
+                    {% with id=task.id %}
+                    <div class="circle border-bottom"
+                         data-percent="{{ complate_dic|lookup:id }}">
+                    </div>
+                    {% endwith %}
+                    <div class="card-body">
+                        <p class="card-text text-center">{{ task.name }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+<a href="{% url 'mng:all_tasks' %}"><p class="text-right">全てのタスクをみる</p></a>
+
 
 {% endblock content %}
+{% block extra_js %}
+<script src="{% static 'mng/js/mypage.js' %}"></script>
+<script src="{% static 'mng/js/jquery.circliful.min.js' %}"></script>
+
+{% endblock extra_js %}
+

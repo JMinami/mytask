@@ -1,4 +1,4 @@
-heroku_env
+new_heroku
 __pycache__
 local_settings.py
 db.sqlite3

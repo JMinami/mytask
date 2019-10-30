@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97a6d8a8-56d6-4e73-9128-7eadef526351" name="Default Changelist" comment="" />
+    <list default="true" id="97a6d8a8-56d6-4e73-9128-7eadef526351" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytask/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytask/wsgi.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,21 +18,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mng/templates/mng/all_tasks.html">
+        <entry file="file://$PROJECT_DIR$/mytask/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="28">
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+              <folding>
+                <element signature="e#307#316#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mytask/settings.py">
+        <entry file="file://$PROJECT_DIR$/mytask/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="139" column="41" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+            <state relative-caret-position="165">
+              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding>
-                <element signature="e#307#316#0" expanded="true" />
+                <element signature="e#222#231#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,6 +163,7 @@
         <option value="$PROJECT_DIR$/mng/templates/mng/all_tasks.html" />
         <option value="$PROJECT_DIR$/mytask/local_settings.py" />
         <option value="$PROJECT_DIR$/mytask/settings.py" />
+        <option value="$PROJECT_DIR$/mytask/wsgi.py" />
       </list>
     </option>
   </component>
@@ -163,13 +171,14 @@
     <option name="x" value="683" />
     <option name="y" value="23" />
     <option name="width" value="683" />
-    <option name="height" value="691" />
+    <option name="height" value="694" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,58 +189,12 @@
             <path>
               <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
               <item name="mytask" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,10 +263,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="23" width="683" height="691" extended-state="0" />
+    <frame x="683" y="23" width="683" height="694" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49915397" visible="true" weight="0.5589124" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49915397" weight="0.5589124" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.500846" side_tool="true" weight="0.5589124" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -465,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mytask/local_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="65" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mytask/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -524,12 +480,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mytask/local_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="65" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mytask/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="139" column="41" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+        <state relative-caret-position="28">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#307#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mytask/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <element signature="e#222#231#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -110,7 +110,6 @@ def all_tasks(request):
 
 def testing(request):
 
-    return HttpResponse("hello")
-
+    return render(request, 'mng/testing.html')
 
 

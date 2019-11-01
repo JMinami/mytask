@@ -139,6 +139,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
 

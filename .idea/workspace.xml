@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a6d8a8-56d6-4e73-9128-7eadef526351" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytask/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytask/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mytask/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+            <state relative-caret-position="-1118">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
               <folding>
                 <element signature="e#307#316#0" expanded="true" />
               </folding>
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/mytask/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#222#231#0" expanded="true" />
               </folding>
@@ -184,11 +183,6 @@
             <path>
               <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytask" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
@@ -482,7 +476,7 @@
     <entry file="file://$PROJECT_DIR$/mytask/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#222#231#0" expanded="true" />
           </folding>
@@ -508,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mytask/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        <state relative-caret-position="-1118">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
           <folding>
             <element signature="e#307#316#0" expanded="true" />
           </folding>

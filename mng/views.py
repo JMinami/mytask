@@ -4,6 +4,7 @@ from .form import taskForm, progressForm
 from django.utils import timezone
 from mng.functions import get_progress_degree
 from django.db.models import Q
+from django.http import HttpResponse
 
 # Create your views here.
 display_task_number = 4
@@ -105,5 +106,11 @@ def all_tasks(request):
 
     ts = task.objects.all()
     return render(request, 'mng/all_tasks.html', {"all_tasks": ts})
+
+
+def testing(request):
+
+    return HttpResponse("hello")
+
 
 

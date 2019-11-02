@@ -135,10 +135,6 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
-if DEBUG:
-    STATIC_URL = '/staticfiles/'
-else:
-    STATIC_URL = '/staticfiles/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'mng/static'),

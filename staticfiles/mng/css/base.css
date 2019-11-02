@@ -1,0 +1,4 @@
+{% load static %}
+.jumbotron-extendss{
+    height: 20vh;
+}

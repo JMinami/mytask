@@ -1,0 +1,6 @@
+.card-img-overlay{
+    padding:0;
+    top:calc(50% - 0.6rem);
+    text-align:center;
+    font-weight:bold;
+}

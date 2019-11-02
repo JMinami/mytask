@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a6d8a8-56d6-4e73-9128-7eadef526351" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mytask/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytask/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mytask/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="182">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="e#307#316#0" expanded="true" />
               </folding>
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mytask/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="e#222#231#0" expanded="true" />
               </folding>
@@ -162,13 +161,26 @@
               <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytask" type="462c0819:PsiDirectoryNode" />
               <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytask" type="462c0819:PsiDirectoryNode" />
+              <item name="mng" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="mng" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytask" type="462c0819:PsiDirectoryNode" />
               <item name="mng" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytask" type="462c0819:PsiDirectoryNode" />
+              <item name="mng" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="mng" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,13 +198,6 @@
               <item name="mytask" type="462c0819:PsiDirectoryNode" />
               <item name="staticfiles" type="462c0819:PsiDirectoryNode" />
               <item name="mng" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mytask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mytask" type="462c0819:PsiDirectoryNode" />
-              <item name="staticfiles" type="462c0819:PsiDirectoryNode" />
-              <item name="mng" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +274,7 @@
     <frame x="683" y="23" width="683" height="694" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49915397" weight="0.6586103" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49915397" weight="0.4652568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.500846" side_tool="true" weight="0.5589124" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -473,23 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mytask/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#307#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mng/templates/mng/testing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mng/templates/mng/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -520,9 +508,26 @@
     <entry file="file://$PROJECT_DIR$/mytask/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="e#222#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mng/templates/mng/testing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mytask/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#307#316#0" expanded="true" />
           </folding>
         </state>
       </provider>
